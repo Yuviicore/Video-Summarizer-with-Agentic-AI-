@@ -1,0 +1,46 @@
+phidata
+python-dotenv
+yfinance
+packaging
+duckduckgo-search
+fastapi
+uvicorn
+groq
+python-multipart
+
+
+#vector database
+sqlalchemy
+psycopg[binary]
+pgvector
+pypdf
+sentence-transformers
+
+#video summarizer
+
+google-generativeai
+streamlit
+openai
+
+# core
+# phidata                       # <- same package as pip install phidata
+# python-dotenv
+# streamlit
+# google-generativeai
+
+# # optional / only if you use them
+# yfinance
+# packaging
+# duckduckgo-search             # ddgs is deprecated
+# fastapi
+# uvicorn
+# groq
+# openai
+# python-multipart
+
+# # vector db
+# sqlalchemy
+# psycopg[binary]
+# pgvector
+# pypdf
+# sentence-transformers
