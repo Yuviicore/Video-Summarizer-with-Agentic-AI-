@@ -18,7 +18,7 @@ sentence-transformers
 
 #video summarizer
 
-google-generativeai
+google-genai
 streamlit
 openai
 
