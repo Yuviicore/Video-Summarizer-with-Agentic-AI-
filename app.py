@@ -18,14 +18,16 @@ import os
 try:
     API_KEY = st.secrets["GOOGLE_API_KEY"]
 except Exception:
-    from dotenv import load_dotenv
     load_dotenv()
-    import os
     API_KEY = os.getenv("GOOGLE_API_KEY")
 
+if not API_KEY:
+    st.error("GOOGLE_API_KEY is not configured. Please add it in Streamlit Secrets.")
+    st.stop()
 
-if API_KEY:
-    genai.configure(api_key=API_KEY)
+os.environ["GOOGLE_API_KEY"] = API_KEY
+
+genai.configure(api_key=API_KEY)
 
 st.set_page_config(
     page_title="MultiModel AI Agent - Video Summarizer",
