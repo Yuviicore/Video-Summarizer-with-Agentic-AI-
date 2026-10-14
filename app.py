@@ -135,7 +135,7 @@ Do not invent details that are not supported by the video.
                     "Gemini is analyzing your video..."
                 ):
                     result = client.models.generate_content(
-                        model="gemini-2.5-flash",
+                        model="gemini-3.8-flash",
                         contents=[
                             analysis_prompt,
                             video_part
