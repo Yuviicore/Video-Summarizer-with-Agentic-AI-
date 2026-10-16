@@ -38,6 +38,16 @@ if not API_KEY:
     st.stop()
 
 client = genai.Client(api_key=API_KEY)
+try:
+    available_models = client.models.list()
+    st.write("Available Gemini models:")
+    st.write([
+        model.name
+        for model in available_models
+        if "generateContent" in (model.supported_actions or [])
+    ])
+except Exception as error:
+    st.error(f"Could not list models: {error}")
 
 # ---------------- Video uploader ----------------
 video_file = st.file_uploader(
